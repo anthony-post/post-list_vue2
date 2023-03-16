@@ -20,7 +20,7 @@
       label="Text"
       name="text"
     ></BaseTextArea>
-    <router-link class="button-link" :to="{ name: 'post-list' }">
+    <router-link class="button-link" :to="{ name: 'post-listobserver' }">
       <BaseButton class="button-item" type="button" theme="add" @click="addPost"
         >Add</BaseButton
       >
@@ -52,6 +52,10 @@ export default {
 <style lang="scss">
 @import "@/assets/styles.scss";
 @import "@/assets/variables.scss";
+
+.create {
+  padding-top: 150px;
+}
 .create__input,
 .create__textarea {
   margin-bottom: 20px;

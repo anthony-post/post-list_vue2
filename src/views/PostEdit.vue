@@ -11,7 +11,7 @@
       name="text"
     ></BaseTextArea>
     <div class="button-wrapper">
-      <router-link class="button-link" :to="{ name: 'post-list' }">
+      <router-link class="button-link" :to="{ name: 'post-listobserver' }">
         <BaseButton
           class="button-item"
           type="button"
@@ -20,7 +20,7 @@
           >Delete</BaseButton
         >
       </router-link>
-      <router-link class="button-link" :to="{ name: 'post-list' }">
+      <router-link class="button-link" :to="{ name: 'post-listobserver' }">
         <BaseButton
           class="button-item"
           type="button"
@@ -54,7 +54,7 @@ export default {
       },
     },
     ...mapState({
-      postList: (state) => state.postList.posts,
+      postList: (state) => state.postList,
     }),
     getIndexPostInArray() {
       let index = null;
@@ -86,6 +86,11 @@ export default {
 <style lang="scss">
 @import "@/assets/styles.scss";
 @import "@/assets/variables.scss";
+
+.card-wrapper {
+  padding-top: 150px;
+}
+
 .button-wrapper {
   display: flex;
   justify-content: space-between;
