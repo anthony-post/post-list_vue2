@@ -1,5 +1,9 @@
 <template>
   <div id="nav" class="nav nav-wrapper">
+    <nav>
+      <router-link :to="{ name: 'post-listobserver' }">Posts</router-link> |
+      <router-link :to="{ name: 'post-create' }">Create</router-link>
+    </nav>
     <BaseInput
       v-model.trim="postText"
       title="titleSearch"
@@ -7,10 +11,6 @@
       type="text"
       placeholder="Search"
     ></BaseInput>
-    <nav>
-      <router-link :to="{ name: 'post-list' }">Posts</router-link> |
-      <router-link :to="{ name: 'post-create' }">Create</router-link>
-    </nav>
   </div>
 </template>
 
@@ -51,12 +51,18 @@ export default {
 }
 .nav {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
 }
 
 .nav-wrapper {
-  margin-bottom: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 10;
+  padding: 30px 0;
 }
 .nav > .brand {
   font-family: $ff;

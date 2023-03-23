@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <NavBar />
-    <router-view />
+    <keep-alive include="PostList">
+      <router-view />
+    </keep-alive>
   </div>
 </template>
 

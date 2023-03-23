@@ -1,16 +1,17 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import PostList from "../views/PostList.vue";
-import CreatePost from "../views/CreatePost.vue";
-import PostEdit from "../views/PostEdit.vue";
+
+const PostEdit = () => import("../views/PostEdit.vue");
+const CreatePost = () => import("../views/CreatePost.vue");
+const PostListObserver = () => import("../views/PostListObserver.vue");
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "post-list",
-    component: PostList,
+    name: "post-listobserver",
+    component: PostListObserver,
   },
   {
     path: "/post/:id",
